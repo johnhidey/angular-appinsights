@@ -30,3 +30,12 @@ angular.module('insightsApp', ['ngRoute', 'angular-appinsights'])
         insightsProvider.start('Application Insights Application Id');
     }])
 ```
+  
+You angular application will now log all page views defined by subscribing to the event locationChangeSuccess within angular.
+You're up and logging page views now.  
+
+To log custom events you just need to have a dependency on ```insights``` and angular's DI will deliver you the object.  From there it is 
+pretty simple.  You will call ```insights.logEvent()``` passing your event data.  For a complete defination of the method please refer to
+Microsoft's document on [logEvent](http://msdn.microsoft.com/en-us/library/dn614099.aspx).  You can also log page views by calling
+```insights.logPageView()```. For a complete defination of the method please refer to Microsoft's document on
+[logPageView](http://msdn.microsoft.com/en-us/library/dn614096.aspx).

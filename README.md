@@ -38,8 +38,7 @@ To log custom events you just need to have a dependency on ```insights``` and an
 pretty simple.  You will call ```insights.logEvent()``` passing your event data.  For a complete defination of the method please refer to
 Microsoft's document on [logEvent](http://msdn.microsoft.com/en-us/library/dn614099.aspx).  You can also log page views by calling
 ```insights.logPageView()```. For a complete defination of the method please refer to Microsoft's document on
-[logPageView](http://msdn.microsoft.com/en-us/library/dn614096.aspx).  
-Here is a sample where the page1Controller is logging it's activation. 
+[logPageView](http://msdn.microsoft.com/en-us/library/dn614096.aspx). Below is a sample where the page1Controller is logging it's activation. 
 ```
 angular.module('insightsApp', ['ngRoute', 'angular-appinsights'])
     .config(['$routeProvider', 'insightsProvider', function ($routeProvider, insightsProvider) {

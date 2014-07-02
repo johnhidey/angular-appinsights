@@ -11,7 +11,7 @@ Include the following script tag
 
 on your SPA shell page (perferrably at the bottom of the of body).  Now all we need to do is initialize the angular-appinsights 
 module and we're done.  The best place to initialize angular-appinsights is in your application bootstrap.  Below is sample of 
-what this might look like.  
+what this might look like. Make sure to take note that the application now has a dependency on ```angular-appinsights```.
 
 ```
 angular.module('insightsApp', ['ngRoute', 'angular-appinsights'])

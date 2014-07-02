@@ -7,9 +7,15 @@
     angular.module('angular-appinsights', [])
         .provider('insights', function () {
 
-            this.start = function (appId) {
+            var _appId,
+                _appName;
 
-                if (appInsights) {
+            this.start = function (appId, appName) {
+
+                _appId = appId;
+                _appName = appName || '(Root)';
+
+                if (appInsights && appId) {
                     appInsights.start(appId);
                 }
 
@@ -17,20 +23,26 @@
 
             function Insights () {
 
-                this.logEvent = function (event, properties, property) {
+                var _logEvent = function (event, properties, property) {
 
-                    if (appInsights) {
+                    if (appInsights && _appId) {
                         appInsights.logEvent(event, properties, property);
+                    }
+
+                },
+
+                _logPageView = function (page) {
+
+                    if (appInsights && _appId) {
+                        appInsights.logPageView(page);
                     }
 
                 };
 
-                this.logPageView = function (page) {
-
-                    if (appInsights) {
-                        appInsights.logPageView(page);
-                    }
-
+                return {
+                    'logEvent': _logEvent,
+                    'logPageView': _logPageView,
+                    'appName': _appName
                 };
 
             }
@@ -41,10 +53,16 @@
 
         })
         .run(function($rootScope, $route, $location, insights) {
-            $rootScope.$on('$locationChangeStart', function() {
+            $rootScope.$on('$locationChangeSuccess', function() {
 
-                insights.logPageView($location.path());
-
+                var pagePath;
+                try {
+                    pagePath = $location.path().substr(1);
+                    pagePath =  insights.appName + '/' + pagePath;
+                }
+                finally {
+                    insights.logPageView(pagePath);
+                }
             });
         });
 

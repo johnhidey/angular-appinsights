@@ -17,7 +17,7 @@
                 });
 
             // Add application insights id here
-            insightsProvider.start('fe43bead-b7b1-4e6c-b273-5a101ba16b9c');
+            insightsProvider.start('Application Insights App Id Goes Here');
 
         }])
         .controller('page1Controller', ['$scope', 'insights', function($scope, insights) {

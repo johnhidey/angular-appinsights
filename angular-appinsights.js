@@ -5,6 +5,7 @@
     "use strict";
 
     angular.module('angular-appinsights', [])
+
         .provider('insights', function () {
 
             var _appId,
@@ -52,6 +53,7 @@
             };
 
         })
+
         .run(function($rootScope, $route, $location, insights) {
             $rootScope.$on('$locationChangeSuccess', function() {
 

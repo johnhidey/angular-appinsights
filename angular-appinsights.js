@@ -14,7 +14,7 @@
             this.start = function (appId, appName) {
 
                 _appId = appId;
-                _appName = appName || '(Root)';
+                _appName = appName || '(Application Root)';
 
                 if (appInsights && appId) {
                     appInsights.start(appId);

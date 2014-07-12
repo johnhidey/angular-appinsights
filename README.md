@@ -3,8 +3,7 @@ Angular-AppInsights
 
 Angular-AppInsights is an angular module for using Microsoft's Application Insights within a SPA (Single Page Application).
 
-Usage
-===================
+## Usage
 Include the following script tag 
 
 ```HTML
@@ -65,3 +64,9 @@ angular.module('insightsApp', ['ngRoute', 'angular-appinsights'])
 
     }]);
 ```
+
+##Change Log
+Please see [`CHANGELOG.md`](CHANGELOG.md)
+
+##License
+MIT. Please see [`LICENSE`](LICENSE)

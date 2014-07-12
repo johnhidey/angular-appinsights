@@ -1,0 +1,24 @@
+{
+  "name": "angular-appinsights",
+  "main": "angular-appinsights.js",
+  "version": "0.0.1",
+  "homepage": "https://github.com/johnhidey/angular-appinsights",
+  "authors": [
+    "johnhidey <john@hidey.com>"
+  ],
+  "description": "A angular module for using Microsoft's Application Insights within a SPA",
+  "keywords": [
+    "appinsights",
+    "metrics",
+    "spa",
+    "applicationinsights"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

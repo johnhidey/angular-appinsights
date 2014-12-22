@@ -65,7 +65,6 @@
 
         .run(function($rootScope, $route, $location, insights) {
             $rootScope.$on('$locationChangeSuccess', function() {
-                debugger;
                 var pagePath;
                 try {
                     pagePath = $location.path().substr(1);

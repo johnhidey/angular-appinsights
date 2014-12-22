@@ -1,6 +1,5 @@
+
 /*global angular: true, appInsights: true */
-
-
 (function () {
     "use strict";
 
@@ -16,26 +15,36 @@
                 _appId = appId;
                 _appName = appName || '(Application Root)';
 
-                if (appInsights && appId) {
+                if (appInsights && appId && appInsights.start) {
                     appInsights.start(appId);
-                }
+                } 
+				if (appInsights && appId && !appInsights.start)
+				{
+				    appInsights=appInsights({ instrumentationKey: appId });
+				}
 
             };
 
             function Insights () {
 
                 var _logEvent = function (event, properties, property) {
-
-                    if (appInsights && _appId) {
+                    
+                    if (appInsights && _appId && appInsights.logEvent) {
                         appInsights.logEvent(event, properties, property);
-                    }
+                    } 
+					if (appInsights && _appId && appInsights.trackEvent){
+					    appInsights.trackEvent(event, properties, property);
+					}
 
                 },
 
                 _logPageView = function (page) {
-
-                    if (appInsights && _appId) {
+                    
+                    if (appInsights && _appId && appInsights.logPageView) {
                         appInsights.logPageView(page);
+                    }
+					if (appInsights && _appId && appInsights.trackPageView) {
+                        appInsights.trackPageView(page);
                     }
 
                 };
@@ -56,7 +65,7 @@
 
         .run(function($rootScope, $route, $location, insights) {
             $rootScope.$on('$locationChangeSuccess', function() {
-
+                debugger;
                 var pagePath;
                 try {
                     pagePath = $location.path().substr(1);

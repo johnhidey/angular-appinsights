@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/johnhidey/angular-appinsights.png?label=ready&title=Ready)](https://waffle.io/johnhidey/angular-appinsights)
 Angular-AppInsights
 ===================
 

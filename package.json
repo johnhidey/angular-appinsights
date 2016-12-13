@@ -1,6 +1,6 @@
 {
   "name": "angular-appinsights",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "A angular module for using Microsoft's Application Insights within a SPA",
   "engines": {
     "node": ">= 0.10.0"

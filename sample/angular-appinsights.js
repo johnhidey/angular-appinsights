@@ -1,4 +1,4 @@
-/*! angular-appinsights - v0.0.3 - 2016-12-12
+/*! angular-appinsights - v0.0.4 - 2016-12-13
 * https://github.com/johnhidey/angular-appinsights#readme
 * Copyright (c) 2016 ; Licensed  */
 (function () {

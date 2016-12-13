@@ -1,7 +1,7 @@
 {
   "name": "angular-appinsights",
   "main": "angular-appinsights.js",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "homepage": "https://github.com/johnhidey/angular-appinsights",
   "authors": [
     "johnhidey <john@hidey.com>"
@@ -17,8 +17,6 @@
   "ignore": [
     "**/.*",
     "node_modules",
-    "bower_components",
-    "test",
-    "tests"
+    "bower_components"
   ]
 }

@@ -17,7 +17,7 @@
 
                 if (appInsights && appId && appInsights.start) {
                     appInsights.start(appId);
-                } 
+                }
 				if (appInsights && appId && !appInsights.start)
 				{
 				    appInsights=appInsights({ instrumentationKey: appId });
@@ -28,10 +28,10 @@
             function Insights () {
 
                 var _logEvent = function (event, properties, property) {
-                    
+
                     if (appInsights && _appId && appInsights.logEvent) {
                         appInsights.logEvent(event, properties, property);
-                    } 
+                    }
 					if (appInsights && _appId && appInsights.trackEvent){
 					    appInsights.trackEvent(event, properties, property);
 					}
@@ -39,7 +39,7 @@
                 },
 
                 _logPageView = function (page) {
-                    
+
                     if (appInsights && _appId && appInsights.logPageView) {
                         appInsights.logPageView(page);
                     }
@@ -74,6 +74,6 @@
                     insights.logPageView(pagePath);
                 }
             });
-        });
+        }]);
 
 }());

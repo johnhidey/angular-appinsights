@@ -1,6 +1,6 @@
 {
   "name": "angular-appinsights",
-  "main": "angular-appinsights.js",
+  "main": "dist/angular-appinsights.js",
   "version": "0.0.4",
   "homepage": "https://github.com/johnhidey/angular-appinsights",
   "authors": [

@@ -113,8 +113,8 @@ angular.module('insightsApp', ['ngRoute', 'angular-appinsights'])
 
 Initializes the Application Insights object with default settings using the provided `appId` and optional `appName`.
 
-`appId` (string) - The key of your Application Insights resource in Azure.
-`appName` (string) - *Optional.* Text that is prepended to the path information when the angular page is changed. **Default:** `(Application Root)`
+* `appId` (string) - The key of your Application Insights resource in Azure.
+* `appName` (string) - *Optional.* Text that is prepended to the path information when the angular page is changed. **Default:** `(Application Root)`
 
 #### Example
 
